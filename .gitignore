@@ -1,0 +1,5 @@
+layout/
+node_modules/
+Gulpfile.js
+package-lock.json
+package.json
