@@ -1,3 +1,5 @@
+.vscode/
+build/
 layout/
 node_modules/
 Gulpfile.js
