@@ -361,7 +361,7 @@ input[type="radio"].visually-hidden {
   height: 315px;
   margin: 0;
   margin-bottom: 22px;
-  background-color: #63d1bb;
+  background-color: #e7e7e7;
   overflow: hidden;
 }
 /* Mobile — product-of-week__image */
@@ -389,6 +389,7 @@ input[type="radio"].visually-hidden {
 /* Mobile — about__title */
 .about__title {
   margin: 0;
+  margin-bottom: 33px;
   font-size: 25px;
   line-height: 30px;
 }
@@ -396,15 +397,19 @@ input[type="radio"].visually-hidden {
 /* Mobile — about__item */
 .about__item {
   position: relative;
-  padding-top: 84px;
+  padding-top: 50px;
+  margin-bottom: 34px;
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
 }
+.about__item:last-child {
+  margin-bottom: 0;
+}
 .about__item::before {
   position: absolute;
   content: "";
-  top: calc(50% - (60px / 2));
+  top: 0;
   left: 0;
   background-repeat: no-repeat;
 }
@@ -590,16 +595,16 @@ input[type="radio"].visually-hidden {
   padding-bottom: 38px;
 }
 /* Mobile — contacts__wrapper */
-/* Mobile — contacts__title */
-.contacts__title,
-.contacts__list {
+.contacts__wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 320px;
   padding: 0 30px;
   margin: 0 auto;
 }
+/* Mobile — contacts__title */
 .contacts__title {
+  margin: 0;
   margin-bottom: 24px;
   font-size: 18px;
   line-height: 30px;
@@ -623,7 +628,7 @@ input[type="radio"].visually-hidden {
 .contacts__parameter {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 78px;
+  padding-right: 28px;
   font-weight: 400;
   text-align: left;
   vertical-align: top;
@@ -987,8 +992,12 @@ input[type="radio"].visually-hidden {
     background-position: center 0;
   }
   /* Tablet — products__title */
-  .products__title {
-    width: 768px;
+  .products__title,
+  .product-of-week__title,
+  .about__title,
+  .reviews__title,
+  .contacts__title {
+    width: auto;
     font-size: 43px;
     line-height: 50px;
   }
@@ -1009,9 +1018,10 @@ input[type="radio"].visually-hidden {
   .products__item {
     width: 334px;
     padding: 26px 36px;
+    padding-bottom: 44px;
   }
   .products__item:hover {
-    padding-bottom: 31px;
+    padding-bottom: 49px;
   }
   /* Tablet — products__link */
   .products__link {
@@ -1025,10 +1035,282 @@ input[type="radio"].visually-hidden {
   .products__link--toy::after {
     top: calc(50% - (52px / 2));
   }
+  /* Tablet — product-of-week */
+  .product-of-week {
+    padding-top: 32px;
+    padding-bottom: 70px;
+  }
+  .product-of-week::after {
+    height: 17px;
+  }
+  /* Tablet — product-of-week__wrapper */
+  .product-of-week__wrapper,
+  .about__wrapper,
+  .reviews__wrapper,
+  .contacts__wrapper,
+  .page-footer__wrapper {
+    width: 768px;
+    padding: 0 50px;
+  }
+  /* Tablet — product-of-week__title */
+  .product-of-week__title {
+    padding-bottom: 0;
+    margin-bottom: 49px;
+  }
+  .product-of-week__title::after {
+    content: "Товар\0aнедели";
+    top: 14px;
+    left: auto;
+    right: 28px;
+    bottom: auto;
+    line-height: 17px;
+    text-align: center;
+    white-space: pre;
+  }
+  /* Tablet — product-of-week__container */
+  .product-of-week__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 43px;
+       -moz-column-gap: 43px;
+            column-gap: 43px;
+    grid-template-areas: "description image" "table image" "price image" "order image";
+  }
+  /* Tablet — product-of-week__description */
+  .product-of-week__description {
+    margin-bottom: 36px;
+    font-size: 17px;
+    line-height: 30px;
+    grid-area: description;
+  }
+  /* Tablet — product-of-week__list */
+  .product-of-week__list {
+    margin-bottom: 53px;
+    grid-area: table;
+  }
+  /* Tablet — product-of-week__image-wrapper */
+  .product-of-week__image-wrapper {
+    width: 333px;
+    height: auto;
+    margin-top: 9px;
+    margin-bottom: 0;
+    grid-area: image;
+  }
+  /* Tablet — product-of-week__price */
+  .product-of-week__price {
+    margin-bottom: 35px;
+    font-size: 20px;
+    grid-area: price;
+  }
+  /* Tablet — product-of-week__button */
+  .product-of-week__button {
+    width: 100%;
+    grid-area: order;
+  }
+  /* Tablet — about */
+  .about {
+    padding-top: 47px;
+    padding-bottom: 84px;
+  }
+  /* Tablet — about__wrapper */
+  /* Tablet — about__title */
+  .about__title {
+    margin-bottom: 52px;
+  }
+  /* Tablet — about__list */
+  .about__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  /* Tablet — about__item */
+  .about__item {
+    width: 334px;
+    margin-bottom: 62px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .about__item--ecological {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .about__item--price {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .about__item--like {
+    margin-bottom: 0;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .about__item--handmade {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .about__item--support {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .about__item--gift {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  /* Tablet — reviews */
+  .reviews {
+    padding-bottom: 84px;
+  }
+  .reviews::after {
+    height: 17px;
+  }
+  /* Tablet — reviews__wrapper */
+  .reviews__wrapper {
+    position: relative;
+    padding-top: 75px;
+    background-image: url("../media/img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 100%;
+  }
+  /* Tablet — reviews__title */
+  .reviews__title {
+    margin-bottom: 50px;
+  }
+  /* Tablet — reviews__list */
+  /* Tablet — reviews__item */
+  .reviews__item {
+    padding-bottom: 18px;
+  }
+  /* Tablet — reviews__author-text */
+  .reviews__author-text {
+    margin-bottom: 57px;
+    font-size: 17px;
+  }
+  /* Tablet — reviews__previous */
+  /* Tablet — reviews__next */
+  .reviews__previous,
+  .reviews__next {
+    position: absolute;
+    width: 69px;
+    margin: 0;
+    right: 69px;
+    bottom: 50px;
+    border: none;
+  }
+  .reviews__previous::before,
+  .reviews__next::before {
+    left: 0;
+  }
+  .reviews__previous {
+    right: 137px;
+  }
+  /* Tablet — reviews__write */
+  .reviews__write {
+    position: absolute;
+    width: 175px;
+    top: 4px;
+    right: 0;
+  }
+  /* Tablet — contacts */
+  .contacts {
+    padding-top: 60px;
+    padding-bottom: 57px;
+  }
+  /* Tablet — contacts__wrapper */
+  /* Tablet — contacts__title */
+  .contacts__title {
+    margin-bottom: 49px;
+  }
+  /* Tablet — contacts__list */
+  .contacts__list {
+    margin-bottom: 55px;
+  }
+  /* Tablet — contacts__body */
+  .contacts__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  /* Tablet — contacts__item */
+  .contacts__item {
+    width: 334px;
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+  .contacts__item:last-child {
+    margin-right: 0;
+  }
+  /* Tablet — contacts__parameter */
+  .contacts__parameter {
+    width: auto;
+    padding-right: 22px;
+  }
+  /* Tablet — contacts__map-container */
+  .contacts__map-container {
+    margin-bottom: 55px;
+  }
+  /* Tablet — contacts__write-us */
+  .contacts__write-us {
+    width: 230px;
+  }
+  /* Tablet — page-footer */
+  .page-footer {
+    padding-top: 56px;
+    padding-bottom: 60px;
+  }
+  /* Tablet — page-footer__logo-link */
+  .page-footer__logo-link {
+    display: block;
+    width: 102px;
+    height: 34px;
+  }
+  .page-footer__logo-link:hover .page-footer__link-icon {
+    fill: #46c1ae;
+  }
+  .page-footer__logo-link:active .page-footer__link-icon {
+    opacity: 0.3;
+  }
+  /* Tablet — page-footer__link-icon */
+  .page-footer__link-icon {
+    -webkit-transition: fill 0.2s, opacity 0.2s;
+    transition: fill 0.2s, opacity 0.2s;
+  }
+  /* Tablet — page-footer__wrapper */
+  .page-footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  /* Tablet — page-footer__social */
+  .page-footer__social {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    margin-left: 153px;
+    border-bottom: none;
+  }
+  /* Tablet — social-list__item */
+  .social-list__item {
+    margin-right: 25px;
+  }
+  /* Tablet — page-footer__copyright */
+  .page-footer__copyright {
+    margin-left: auto;
+  }
   /* Tablet Retina */
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .products__title-wrapper {
     background-image: url("../media/img/hero-tablet@2x.jpg");
+  }
+  .reviews__wrapper {
+    background-image: url("../media/img/review@2x.jpg");
   }
 }
