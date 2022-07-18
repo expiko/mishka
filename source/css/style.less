@@ -70,6 +70,8 @@ input[type="radio"].visually-hidden {
   transition: color 0.2s, background-color 0.2s;
 }
 
+/* Mobile wrappers */
+
 .product-of-week__button,
 .reviews__write,
 .contacts__write-us {
@@ -169,7 +171,8 @@ input[type="radio"].visually-hidden {
 /* Mobile — site-list__link */
 /* Mobile — user-list__link */
 .site-list__link,
-.user-list__link {
+.user-list__link,
+.stock-list__link {
   display: block;
   box-sizing: border-box;
   width: 260px;
@@ -236,7 +239,9 @@ input[type="radio"].visually-hidden {
 
 /* Mobile — products__title-wrapper */
 .products__title-wrapper {
+  box-sizing: border-box;
   width: 320px;
+  padding: 0 30px;
   margin: 0 auto;
 
   padding-top: 72px;
@@ -246,14 +251,13 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: center 20px;
   background-size: 150%;
-  // background-size: cover;
 }
 
 /* Mobile — products__title */
 .products__title {
   box-sizing: border-box;
-  width: 320px;
-  padding: 0 30px;
+  // width: 320px;
+  // padding: 0 30px;
   margin: 0 auto;
   // margin-bottom: 120px;
 
@@ -294,8 +298,7 @@ input[type="radio"].visually-hidden {
 .products__link {
   position: relative;
   display: block;
-  width: 130px;
-  padding-right: 130px;
+  width: 260px;
   margin: 0 auto;
 
   font-size: 19px;
@@ -657,6 +660,11 @@ input[type="radio"].visually-hidden {
   }
 }
 
+/* Mobile — reviews__toggles */
+.reviews__toggles {
+  display: flex;
+}
+
 /* Mobile — reviews__previous */
 /* Mobile — reviews__next */
 .reviews__previous,
@@ -716,14 +724,20 @@ input[type="radio"].visually-hidden {
 /* Mobile — contacts__wrapper */
 .contacts__wrapper {
   box-sizing: border-box;
-  width: 320px;
-  padding: 0 30px;
+  // width: 320px;
+  // padding: 0 30px;
   margin: 0 auto;
 }
 
 /* Mobile — contacts__title */
+.contacts__title,
+.contacts__list {
+  box-sizing: border-box;
+  width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
 .contacts__title {
-  margin: 0;
   margin-bottom: 24px;
 
   font-size: 18px;
@@ -763,7 +777,6 @@ input[type="radio"].visually-hidden {
 /* Mobile — contacts__value */
 .contacts__value {
   &--address {
-    padding-right: 5px;
   }
 }
 
@@ -1026,6 +1039,15 @@ input[type="radio"].visually-hidden {
 
 /* Tablet */
 @media (min-width: @tablet-width) {
+  /* Tablet wrappers */
+  .product-of-week__wrapper,
+  .about__wrapper,
+  .reviews__wrapper,
+  .page-footer__wrapper {
+    width: 768px;
+    padding: 0 50px;
+  }
+
   /* Tablet — main-navigation */
   .main-navigation {
     height: 88px;
@@ -1059,13 +1081,17 @@ input[type="radio"].visually-hidden {
     height: 88px;
   }
 
-  /* Tablet — site-list */
-  .site-list {
-    display: flex;
+  /* Tablet — main-navigation__site-list */
+  .main-navigation__site-list {
     margin-top: 17px;
 
     order: 3;
     z-index: 1;
+  }
+
+  /* Tablet — site-list */
+  .site-list {
+    display: flex;
   }
 
   /* Tablet — site-list__item */
@@ -1107,13 +1133,16 @@ input[type="radio"].visually-hidden {
     font-size: 15px;
   }
 
+  /* Tablet — main-navigation__user-list */
+  .main-navigation__user-list {
+    order: 2;
+  }
+
   /* Tablet — user-list */
   .user-list {
     display: flex;
 
     align-items: center;
-
-    order: 2;
   }
 
   /* Tablet — user-list__link */
@@ -1234,13 +1263,7 @@ input[type="radio"].visually-hidden {
   }
 
   /* Tablet — product-of-week__wrapper */
-  .product-of-week__wrapper,
-  .about__wrapper,
-  .reviews__wrapper,
-  .contacts__wrapper,
-  .page-footer__wrapper {
-    width: 768px;
-    padding: 0 50px;
+  .product-of-week__wrapper {
   }
 
   /* Tablet — product-of-week__title */
@@ -1409,16 +1432,25 @@ input[type="radio"].visually-hidden {
     font-size: 17px;
   }
 
+  /* Tablet — reviews__author-name */
+  .reviews__author-name {
+    font-size: 18px;
+  }
+
+  /* Tablet — reviews__toggles */
+  .reviews__toggles {
+    position: absolute;
+
+    right: 69px;
+    bottom: 50px;
+  }
+
   /* Tablet — reviews__previous */
   /* Tablet — reviews__next */
   .reviews__previous,
   .reviews__next {
-    position: absolute;
     width: 69px;
     margin: 0;
-
-    right: 69px;
-    bottom: 50px;
 
     border: none;
 
@@ -1426,17 +1458,14 @@ input[type="radio"].visually-hidden {
       left: 0;
     }
   }
-  .reviews__previous {
-    right: 137px;
-  }
 
   /* Tablet — reviews__write */
   .reviews__write {
     position: absolute;
     width: 175px;
 
-    top: 4px;
-    right: 0;
+    top: 78px;
+    right: 50px;
   }
 
   /* Tablet — contacts */
@@ -1450,8 +1479,27 @@ input[type="radio"].visually-hidden {
   }
 
   /* Tablet — contacts__title */
+  .contacts__title,
+  .contacts__list {
+    width: 768px;
+    padding: 0 50px;
+  }
   .contacts__title {
+    position: relative;
     margin-bottom: 49px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 47px;
+      height: 81px;
+
+      top: -14px;
+      right: 53px;
+
+      background-image: url("../media/svg/flag-icon.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   /* Tablet — contacts__list */
@@ -1555,6 +1603,384 @@ input[type="radio"].visually-hidden {
     }
     .reviews__wrapper {
       background-image: url("../media/img/review@2x.jpg");
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: @desktop-width) {
+  /* Desktop wrappers */
+  .about__wrapper,
+  .reviews__wrapper,
+  .contacts__wrapper {
+    width: 1250px;
+    padding: 0 100px;
+    padding-left: 275px;
+  }
+
+  /* Desktop — main-navigation__wrapper */
+  .main-navigation__wrapper {
+    width: 1250px;
+    padding: 0 100px;
+
+    justify-content: space-between;
+  }
+
+  /* Desktop — main-navigation__logo-link */
+  .main-navigation__logo-link {
+    width: 149px;
+    margin-right: 24px;
+
+    order: 2;
+  }
+
+  /* Desktop — main-navigation__logo-image */
+  .main-navigation__logo-image {
+    width: 149px;
+  }
+
+  /* Desktop — main-navigation__site-list */
+  .main-navigation__site-list {
+    margin: 0;
+
+    order: 1;
+  }
+
+  /* Desktop — site-list__item */
+  .site-list__item {
+    padding: 32px 34px;
+    margin: 0;
+
+    &:first-child {
+      padding-left: 0;
+
+      border-right: 1px solid #ececec;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  /* Desktop — site-list__link */
+  .site-list__link {
+    font-size: 17px;
+  }
+
+  /* Desktop — main-navigation__user-list */
+  .main-navigation__user-list {
+    width: 350px;
+
+    order: 3;
+  }
+
+  /* Desktop — main-navigation__stock-list */
+  .main-navigation__stock-list {
+    margin-top: 17px;
+
+    order: 4;
+    z-index: 1;
+  }
+
+  /* Desktop — stock-list */
+  .stock-list {
+    display: flex;
+  }
+
+  /* Desktop — stock-list__item */
+  .stock-list__item {
+    margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  /* Desktop — stock-list__link */
+  .stock-list__link {
+    width: auto;
+    padding: 0;
+
+    font-size: 15px;
+  }
+
+  /* Desktop — main-navigation__delivery */
+  .main-navigation__delivery {
+    order: 5;
+  }
+
+  /* Desktop — products */
+  .products {
+    &::after {
+      height: 34px;
+    }
+  }
+
+  /* Desktop — products__title-wrapper */
+  .products__title-wrapper {
+    width: 1250px;
+    padding: 154px 100px 365px 100px;
+
+    background-image: url("../media/img/hero-desktop@1x.jpg");
+    background-position: center -3px;
+    background-size: 93%;
+  }
+
+  /* Desktop — products__title */
+  .products__title,
+  .product-of-week__title,
+  .about__title,
+  .reviews__title,
+  .contacts__title {
+    padding: 0;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  /* Desktop — products__list */
+  .products__list {
+    width: 1250px;
+    padding: 0 100px;
+  }
+
+  /* Desktop — products__item */
+  .products__item {
+    width: 525px;
+  }
+
+  /* Desktop — products__link */
+  .products__link {
+    width: auto;
+    margin: 0;
+  }
+
+  /* Desktop — product-of-week */
+  .product-of-week {
+    padding-bottom: 97px;
+
+    &::after {
+      width: 1050px;
+      height: 23px;
+      margin: 0 auto;
+
+      background-position: center;
+
+      transform: rotateX(180deg);
+    }
+  }
+
+  /* Desktop — product-of-week__wrapper */
+  .product-of-week__wrapper {
+    position: relative;
+    width: 1250px;
+    padding: 0 100px;
+    padding-left: 275px;
+  }
+
+  /* Desktop — product-of-week__title */
+  .product-of-week__title {
+    padding-top: 74px;
+
+    z-index: 1;
+
+    &::after {
+      top: auto;
+      left: -128px;
+      right: auto;
+      bottom: 8px;
+    }
+  }
+
+  /* Desktop — product-of-week__container */
+  .product-of-week__container {
+    grid-template-columns: 292px;
+  }
+
+  /* Desktop — product-of-week__description */
+  .product-of-week__description {
+    margin-bottom: 47px;
+  }
+
+  /* Desktop — product-of-week__list */
+  .product-of-week__list {
+    margin-bottom: 107px;
+  }
+
+  /* Desktop — product-of-week__image-wrapper */
+  .product-of-week__image-wrapper {
+    position: absolute;
+    width: 525px;
+    height: 636px;
+
+    top: 13px;
+    right: 100px;
+  }
+
+  /* Desktop — about */
+  .about {
+    padding-top: 58px;
+    padding-bottom: 89px;
+  }
+
+  /* Desktop — about__wrapper */
+  .about__wrapper {
+  }
+
+  /* Desktop — about__title */
+  .about__title {
+  }
+
+  /* Desktop — about__item */
+  .about__item {
+    width: 350px;
+  }
+
+  /* Desktop — reviews */
+  .reviews {
+    padding-bottom: 91px;
+
+    &::after {
+      width: 1050px;
+      height: 23px;
+      margin: 0 auto;
+
+      transform: rotateX(180deg);
+    }
+  }
+
+  /* Desktop — reviews__wrapper */
+  .reviews__wrapper {
+    padding-top: 70px;
+
+    background-position: 100px;
+  }
+
+  /* Desktop — reviews__title */
+  .reviews__title {
+  }
+
+  /* Desktop — reviews__item */
+  .reviews__item {
+    padding-bottom: 65px;
+  }
+
+  /* Desktop — reviews__author-text */
+  .reviews__author-text {
+    padding-right: 75px;
+    margin-bottom: 38px;
+  }
+
+  /* Desktop — reviews__author-name */
+  .reviews__author-name {
+    font-size: 17px;
+  }
+
+  /* Desktop — reviews__toggles */
+  .reviews__toggles {
+    right: 118px;
+    bottom: 97px;
+  }
+
+  /* Desktop — reviews__previous */
+  .reviews__previous {
+  }
+
+  /* Desktop — reviews__next */
+  .reviews__next {
+  }
+
+  /* Desktop — reviews__write */
+  .reviews__write {
+    top: 79px;
+    right: 100px;
+  }
+
+  /* Desktop — contacts */
+  .contacts {
+    padding-top: 70px;
+    padding-bottom: 106px;
+  }
+
+  /* Desktop — contacts__wrapper */
+  .contacts__wrapper {
+    display: grid;
+    grid-template-columns: 350px 525px;
+    grid-template-areas:
+      "title map"
+      "table map"
+      "write-us map";
+  }
+
+  /* Desktop — contacts__title */
+  .contacts__title {
+    padding-top: 71px;
+    margin-bottom: 36px;
+
+    grid-area: title;
+
+    &::after {
+      top: auto;
+      left: -112px;
+      right: auto;
+      bottom: -4px;
+    }
+  }
+
+  /* Desktop — contacts__list */
+  .contacts__list {
+    display: table;
+    width: 100%;
+
+    grid-area: table;
+  }
+
+  /* Desktop — contacts__body */
+  .contacts__body {
+    flex-direction: column;
+  }
+
+  /* Desktop — contacts__item */
+  .contacts__item {
+    width: auto;
+    margin-bottom: 26px;
+  }
+
+  /* Desktop — contacts__map-container */
+  .contacts__map-container {
+    // display: none;
+    width: 525px;
+    margin-bottom: 0;
+
+    grid-area: map;
+  }
+
+  /* Desktop — contacts__write-us */
+  .contacts__write-us {
+    margin: 0;
+
+    align-self: flex-end;
+    grid-area: write-us;
+  }
+
+  /* Desktop — page-footer__wrapper */
+  .page-footer__wrapper {
+    width: 1250px;
+    padding: 0 100px;
+  }
+
+  /* Desktop — page-footer__social */
+  .page-footer__social {
+    margin-left: 344px;
+  }
+
+  /* Desktop — page-footer__copyright */
+  .page-footer__copyright {
+  }
+
+  /* Desktop Retina */
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .products__title-wrapper {
+      background-image: url("../media/img/hero-desktop@2x.jpg");
     }
   }
 }
