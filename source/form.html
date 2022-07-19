@@ -95,27 +95,27 @@
           <fieldset class="form-type">
             <div class="form-type__wrapper">
               <legend class="form-type__title">Тип</legend>
-              <input class="visually-hidden" id="form-type-accessory" name="type" value="accessory-for-interior" type="radio" checked />
-              <label class="form-type__label" for="form-type-accessory">Аксессуар для интерьера</label>
-              <input class="visually-hidden" id="form-type-toy" name="type" value="childrens-toy" type="radio" />
+              <input class="form-type__radio visually-hidden" id="form-type-accessory" name="type" value="accessory-for-interior" type="radio" checked />
+              <label class="form-type__label form-type__label--accessory" for="form-type-accessory">Аксессуар для интерьера</label>
+              <input class="form-type__radio visually-hidden" id="form-type-toy" name="type" value="childrens-toy" type="radio" />
               <label class="form-type__label" for="form-type-toy">Детская игрушка</label>
             </div>
           </fieldset>
           <fieldset class="form-color">
             <div class="form-color__wrapper">
               <legend class="form-color__title">Цвет</legend>
-              <input class="visually-hidden" id="form-color-white" name="white" value="white" type="checkbox" checked />
-              <label for="form-color-white">Белый</label>
-              <input class="visually-hidden" id="form-color-gray" name="gray" value="gray" type="checkbox" checked />
-              <label for="form-color-gray">Серый</label>
-              <input class="visually-hidden" id="form-color-tiffany" name="tiffany" value="tiffany" type="checkbox" />
-              <label for="form-color-tiffany">«Тиффани»</label>
-              <input class="visually-hidden" id="form-color-black" name="black" value="black" type="checkbox" />
-              <label for="form-color-black">Черный</label>
-              <input class="visually-hidden" id="form-color-pink" name="pink" value="pink" type="checkbox" />
-              <label for="form-color-pink">Розовый</label>
-              <input class="visually-hidden" id="form-color-orange" name="orange" value="orange" type="checkbox" />
-              <label for="form-color-orange">Оранжевый</label>
+              <input class="form-color__checkbox visually-hidden" id="form-color-white" name="white" value="white" type="checkbox" checked />
+              <label class="form-color__label" for="form-color-white">Белый</label>
+              <input class="form-color__checkbox visually-hidden" id="form-color-gray" name="gray" value="gray" type="checkbox" checked />
+              <label class="form-color__label" for="form-color-gray">Серый</label>
+              <input class="form-color__checkbox visually-hidden" id="form-color-tiffany" name="tiffany" value="tiffany" type="checkbox" />
+              <label class="form-color__label" for="form-color-tiffany">«Тиффани»</label>
+              <input class="form-color__checkbox visually-hidden" id="form-color-black" name="black" value="black" type="checkbox" />
+              <label class="form-color__label" for="form-color-black">Черный</label>
+              <input class="form-color__checkbox visually-hidden" id="form-color-pink" name="pink" value="pink" type="checkbox" />
+              <label class="form-color__label" for="form-color-pink">Розовый</label>
+              <input class="form-color__checkbox visually-hidden" id="form-color-orange" name="orange" value="orange" type="checkbox" />
+              <label class="form-color__label" for="form-color-orange">Оранжевый</label>
             </div>
           </fieldset>
           <fieldset class="form-initials">
@@ -166,7 +166,7 @@
             </div>
           </fieldset>
           <small class="form__note">*Поля обязательны для заполнения</small>
-          <input class="form__submit" name="submit" value="Отправить заказ" type="submit" />
+          <input class="form__submit button" name="submit" value="Отправить заказ" type="submit" />
         </form>
       </section>
     </main>
