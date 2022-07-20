@@ -1,6 +1,5 @@
 "use strict";
 
-var controller = new AbortController();
 var order = document.querySelector(".product-of-week__button");
 var overlay = document.querySelector(".overlay");
 var modalSizes = document.querySelector(".modal-sizes");
