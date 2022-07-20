@@ -288,6 +288,24 @@
         </div>
       </div>
     </footer>
+    <div class="overlay">
+      <section class="modal-sizes">
+        <b class="modal-sizes__title">Добавить в корзину</b>
+        <p class="modal-sizes__description">Выберите размер:</p>
+        <form class="modal-sizes__form" action="#">
+          <fieldset class="modal-sizes__sizes">
+            <input class="modal-sizes__checkbox visually-hidden" id="modal-sizes-checkbox-s" name="size-s" value="size-s" type="checkbox" checked />
+            <label class="modal-sizes__label" for="modal-sizes-checkbox-s">S</label>
+            <input class="modal-sizes__checkbox visually-hidden" id="modal-sizes-checkbox-m" name="size-m" value="size-m" type="checkbox" />
+            <label class="modal-sizes__label" for="modal-sizes-checkbox-m">M</label>
+            <input class="modal-sizes__checkbox visually-hidden" id="modal-sizes-checkbox-l" name="size-l" value="size-l" type="checkbox" />
+            <label class="modal-sizes__label" for="modal-sizes-checkbox-l">L</label>
+          </fieldset>
+          <input class="modal-sizes__add" value="Добавить" type="button" />
+        </form>
+      </section>
+    </div>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/modal-sizes.js"></script>
   </body>
 </html>
