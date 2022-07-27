@@ -1,9 +1,1 @@
-.vscode/
-build/
-layout/
 node_modules/
-Gulpfile.js
-package-lock.json
-package.json
-.prettierrc.json
-source/fonts/open-sans.zip
